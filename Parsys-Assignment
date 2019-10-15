@@ -1,0 +1,5 @@
+-In order to properly execute, monitor and cancel jobs in a HPC, the jobs should be submitted to the job scheduling system (SGE-Son of Grid Engine) in our case.
+This is done by using several commands. Most important amongs them are qsub, qstat and qdel.
+-qsub name_of_script - Is a command used to submit jobs into the batch system.
+-qstat - Is a command used to get information about the running and waiting jobs
+-qdel job-id - Is a command used to delete the job with the give job id as an argument.
