@@ -21,7 +21,14 @@ openmpi-8perhost
 openmpi-fillup
 smp
 
-Based on the en
+Based on the environment, it is determined how the resources for the execution of the parallel program, are going to be shared.
+For example: In the openmpi-Xperhost, X the represents the number of processes that each host get.
+In the openmpi-fillup X a number of X slots are allocated across an arbitrary number of hosts.
+The environment can also take these parameters: openmpi-fillup X-Y environment where the job will 
+run on no less than X cores and no more than Y cores, accord to the availability of the cores.
+In the openmp X environment a number of X cores will be assigned for the execution of the parallel program.
+When selecting a parallel environment the statement should always start with -pe, otherwise SGE will assume that th
+job is sequential.
 
 
 
