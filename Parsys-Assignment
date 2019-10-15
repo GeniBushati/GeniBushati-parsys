@@ -3,3 +3,31 @@ This is done by using several commands. Most important amongs them are qsub, qst
 -qsub name_of_script - Is a command used to submit jobs into the batch system.
 -qstat - Is a command used to get information about the running and waiting jobs
 -qdel job-id - Is a command used to delete the job with the give job id as an argument.
+
+First of all, if we are talking about executing a parallel programs, we should determine the number of slots allocated per node.
+For example: In the case of openmpi-Xperhost, the parameter X specifies the number of cores used per node.
+
+-Parallel programs,need an environment in order to be executed. When running a job in a parallel environment, it 
+is important to know the list of the available environments, which can be found by executing the command qconf -spl. 
+In our case the available environments are:
+
+make
+mpi
+openmp
+openmpi-1perhost
+openmpi-2perhost
+openmpi-4perhost
+openmpi-8perhost
+openmpi-fillup
+smp
+
+Based on the en
+
+
+
+
+
+
+
+
+
