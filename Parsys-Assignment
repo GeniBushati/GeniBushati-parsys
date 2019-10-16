@@ -5,8 +5,15 @@
 -qstat - Is a command used to get information about the running and waiting jobs
 -qdel job-id - Is a command used to delete the job with the give job id as an argument.
 
- First of all, if we are talking about executing a parallel programs, we should determine the number of slots allocated per node.
- For example: In the case of openmpi-Xperhost, the parameter X specifies the number of cores used per node.
+ Firstly, the most important parameter when we discuss execution in parallel environment, is the number-of-slots.
+ It determines how the resources to execute this job are going to be shared.
+ Another important parameter when submitting a job is the name of the queue. 
+ It is important becauese it specifies the queue to be used, although the default queue is std.q. To select the
+ queue we should use -q [name_of_queue].
+ Thirdly, the parameter of the job name determines the name of the job. The default name of the job, is the
+ file name of the script. TO set the name of the job we use -N[name].
+ Yet another important parameter is v_hmem, which determines the size of allocated memory per slot.
+ It is defined -l h_vmem = [size_of_memory]. 
 
 -Parallel programs,need an environment in order to be executed. When running a job in a parallel environment, it 
  is important to know the list of the available environments, which can be found by executing the command qconf -spl. 
